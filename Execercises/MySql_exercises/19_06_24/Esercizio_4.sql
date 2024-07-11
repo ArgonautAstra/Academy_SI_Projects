@@ -1,0 +1,24 @@
+DROP DATABASE IF EXISTS academy;
+CREATE DATABASE academy;
+
+-- CREATE DATABASE IF NOT EXISTS academy;
+
+USE academy;
+
+CREATE TABLE Country(
+	id_country VARCHAR(2) DEFAULT NULL,
+    state VARCHAR(255) DEFAULT NULL,
+    id_regione DECIMAL(10,0) DEFAULT NULL
+);
+
+-- ESERCIZIO 1
+
+ALTER TABLE Country
+ADD CONSTRAINT PRIMARY KEY(id_country,state);
+
+INSERT INTO Country VALUES
+(10,"AAAAA",100),
+(20,"BBBBB",100),
+(30,"CCCCC",100);
+
+SELECT * FROM Country;

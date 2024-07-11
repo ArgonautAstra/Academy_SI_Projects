@@ -1,0 +1,25 @@
+DROP DATABASE IF EXISTS academy;
+CREATE DATABASE academy;
+
+-- CREATE DATABASE IF NOT EXISTS academy;
+
+USE academy;
+
+CREATE TABLE Country(
+	id_country VARCHAR(2) DEFAULT NULL,
+    name_country VARCHAR(255) DEFAULT NULL,
+    id_regione DECIMAL(10,0) DEFAULT NULL
+);
+
+-- ESERCIZIO 1
+
+INSERT INTO Country 
+VALUES (10,"AAAAA",100);
+
+INSERT INTO Country 
+VALUES (20,"BBBBB",100);
+
+INSERT INTO Country 
+VALUES (30,"CCCCC",100);
+
+SELECT * FROM Country;

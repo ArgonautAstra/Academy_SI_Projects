@@ -1,0 +1,21 @@
+DROP DATABASE IF EXISTS academy;
+CREATE DATABASE academy;
+
+-- CREATE DATABASE IF NOT EXISTS academy;
+
+USE academy;
+
+CREATE TABLE IF NOT EXISTS Province (
+    acronym VARCHAR(2) NOT NULL PRIMARY KEY,
+    province_name VARCHAR(255) NOT NULL,
+    habitants_number INT NOT NULL DEFAULT(0)
+);
+
+-- EXERCISE 1
+
+ALTER TABLE Province RENAME TO Region;
+
+-- EXERCISE 2
+
+ALTER TABLE Region
+ADD COLUMN main_street VARCHAR(255) NOT NULL;

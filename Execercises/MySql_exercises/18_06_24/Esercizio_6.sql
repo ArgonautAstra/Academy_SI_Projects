@@ -1,0 +1,15 @@
+-- DROP DATABASE IF EXISTS academy;
+-- CREATE DATABASE academy;
+
+-- CREATE DATABASE IF NOT EXISTS academy;
+
+USE academy;
+
+-- EXERCISE 1
+
+CREATE TABLE Job (
+    id_job INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name_job VARCHAR(255) NOT NULL,
+    min_salary DECIMAL NOT NULL,
+    max_salary DECIMAL CHECK(max_salary <= 25000) NOT NULL
+);
