@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}"></title>
+	<link th:href="@{css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- GET Method to print a list of Article -->
+	
+	<h1 class="rotation" th:text="'Welcome ' + ${name} + '!'"></h1>
+	
+	<h3>Here a list of your product:</h3>
+	
+	<ul>
+		<li th:each="item: ${list}" th:text="${item.id} + ', ' + 
+											 ${item.description} + ', Price: ' + 
+											 ${item.price} + ' €'">
+		</li>
+	</ul>
+	
+	<!-- GET Method to print, by toString() a list of Article -->
+	
+	<h3>Here a list of your product by toString():</h3>
+	
+	<ul>
+		<li th:each="item: ${list}" th:text="${item.toString()}"></li>
+	</ul>
+	
+	<!-- POST Method to print a list of Article -->
+	
+	<h3>Please, login in your personal web page:</h3>
+	
+	<form th:object="${user}" method="POST">
+		<input type="text" th:field="*{firstname}" placeholder="Firstame" required>
+		<p th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" style="color: red"></p>
+		<br>
+		
+		<input type="text" th:field="*{lastname}"placeholder="Lastname" required>
+		<p th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" style="color: red"></p>
+		<br>
+		
+		<input type="password" th:field="*{password}" placeholder="Password" required>
+		<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" style="color: red"></p>
+		<br>
+		
+		<button type="submit">Login</button>
+	</form>
+</body>
+</html>

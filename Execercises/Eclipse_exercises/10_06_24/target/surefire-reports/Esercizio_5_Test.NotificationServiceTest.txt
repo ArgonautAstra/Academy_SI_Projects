@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: Esercizio_5_Test.NotificationServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.535 s <<< FAILURE! - in Esercizio_5_Test.NotificationServiceTest
+sendNotificationTest  Time elapsed: 1.527 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+sMSService.sendSMS(
+    <any string>,
+    <any string>
+);
+-> at Esercizio_5_Test.NotificationServiceTest.sendNotificationTest(NotificationServiceTest.java:41)
+Actually, there were zero interactions with this mock.
+
+	at Esercizio_5_Test.NotificationServiceTest.sendNotificationTest(NotificationServiceTest.java:41)
+

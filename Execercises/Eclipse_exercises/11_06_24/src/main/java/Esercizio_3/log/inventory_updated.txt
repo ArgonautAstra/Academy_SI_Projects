@@ -1,0 +1,5 @@
+Apple,100,0.30
+Banana,5,0.15
+Orange,15,0.30
+Kiwi,20,0.35
+Peach,20,0.35

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}"></title>
+	<link th:href="@{css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+
+	<h1 th:text="'Welcome ' + ${name} + '!'"></h1>
+
+	<h3>Here your local DB:</h3>
+	
+	<table>
+		<tr>
+			<td>ID</td>
+			<td>DESCRIPTION</td>
+			<td>PRICE</td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr th:each="item : ${list}">
+			<td th:text="${item.id}"></td>
+			<td th:text="${item.name_article}"></td>
+			<td th:text="${item.price_article}"></td>
+			<td><a th:href="@{/form(id=${item.id})}">Modify</a></td>
+			<td><a th:href="@{/delete(id=${item.id})}">Delete</a></td>
+		</tr>
+	</table>
+	
+	<a class="btn" th:href="@{/form}">Add article</a>
+
+</body>
+</html>

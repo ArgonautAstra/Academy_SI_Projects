@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${title}"></title>
+	<link th:href="@{css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+
+	<h1>Add article:</h1>
+
+	<form th:object="${article}" method="POST">		
+		<input type="text" th:field="*{name_article}" placeholder="Name article" required>
+		<p th:if="${#fields.hasErrors('name_article')}" th:errors="*{name_article}" style="color: red"></p>
+		<br>
+		
+		<input type="number" th:field="*{price_article}" placeholder="0" step="0.01" required>
+		<p th:if="${#fields.hasErrors('price_article')}" th:errors="*{price_article}" style="color: red"></p>
+		<br>
+		
+		<button type="submit">Set</button>
+	</form>
+	
+</body>
+</html>

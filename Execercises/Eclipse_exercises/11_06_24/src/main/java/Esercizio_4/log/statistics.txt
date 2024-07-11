@@ -1,0 +1,16 @@
+Mario
+Voto minimo: 6.0
+Voto medio: 6.8333335
+Voto massimo: 8.0
+Pippo
+Voto minimo: 6.0
+Voto medio: 7.1666665
+Voto massimo: 9.0
+Thomas
+Voto minimo: 6.0
+Voto medio: 7.5
+Voto massimo: 10.0
+Paolo
+Voto minimo: 7.0
+Voto medio: 8.583333
+Voto massimo: 10.0

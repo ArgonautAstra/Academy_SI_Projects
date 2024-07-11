@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body{
+	background-color: black;
+	color: white;
+}
+
+input{
+	border-radius: 15px;
+	padding: 5px; 
+	margin-bottom: 5px;
+}

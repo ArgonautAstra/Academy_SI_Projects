@@ -1,0 +1,9 @@
+Mario,6
+Pippo,6
+Thomas,6
+Mario,6.5
+Pippo,6.5
+Thomas,6.5
+Mario,8
+Pippo,9
+Thomas,10
